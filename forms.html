@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="forms.css">
+    <!--<script src="forms.js"></script>-->
+</head>
+<!--<script src="forms.js"></script>-->
+
+<body>
+    <section class="container">
+        <header>Contact Form</header>
+        <form action="#" class="form" id="forms">
+            <div class="column">
+                <div class="info">
+                    <label>First Name:</label>
+                    <input type="text" name="" id="" placeholder="Enter Your First Name" required>
+                </div>
+                <div class="info">
+                    <label>Last Name:</label>
+                    <input type="text" name="" id="" placeholder="Enter Your Last Name" required>
+                </div>
+            </div>
+            <div class="info">
+                <label>Email:</label>
+                <input type="email" name="" id="email_input" placeholder="Enter Your Email Address" required>
+            </div>
+            <div class="info">
+                <label>Verify Email:</label>
+                <input type="email" name="" id="email_verify" placeholder="Enter Your Email Address Again" required>
+            </div>
+            <div class="column">
+                <div class="info">
+                    <label>Phone Number:</label>
+                    <input type="number" name="" id="" placeholder="Enter Your Phone Number" required>
+                </div>
+                <div class="info">
+                    <label>Birth Date:</label>
+                    <input type="date" name="" id="" placeholder="Enter Your Birth Date" required>
+                </div>
+            </div>
+            <div class="info">
+                <label>Address:</label>
+                <input type="text" name="" id="" placeholder="Enter Your Address" required>
+            </div>
+            <div class="age-box, info">
+                <h4>Age:</h4>
+                <div class="age-option">
+                    <div class="age">
+                        <input type="radio" name="age" id="child">
+                        <label for="child">0-12</label>
+                    </div>
+                    <div class="age">
+                        <input type="radio" name="age" id="teen">
+                        <label for="teen">12-18</label>
+                    </div>
+                    <div class="age">
+                        <input type="radio" name="age" id="adult">
+                        <label for="adult">18+</label>
+                    </div>
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+   <script>
+        const form = document.querySelector("#forms");
+        const email1 = document.querySelector("#email_input");
+        const email2 = document.querySelector("#email_verify");
+
+       
+        form.addEventListener("submit", handleSubmit);
+        function handleSubmit() {
+            SubmitEvent.preventDefault();
+            if (email1.value === email2.value) {
+                email2.style.backround = "transparent";
+            }
+            else {
+                email2.style.backround = "red";
+                alert("The email is not the same");
+            }
+        }
+
+    </script> 
+</body>
+
+</html>

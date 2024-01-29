@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="carousel.css">
+</head>
+<script src="carousel.js"></script>
+<body>
+    <h1>Spain Highlights:</h1>
+    <div class="photo_container">
+        <img class="spain" src="spain-photos for carousel/spain1.jpeg" onclick="stopSlide()" alt="spain-photo1">
+        <img class="spain" src="spain-photos for carousel/spain2.jpeg" onclick="stopSlide()" alt="spain-photo2">
+        <img class="spain" src="spain-photos for carousel/spain3.jpeg" onclick="stopSlide()" alt="spain-photo3">
+        <img class="spain" src="spain-photos for carousel/spain4.jpeg" onclick="stopSlide()" alt="spain-photo4">
+        <img class="spain" src="spain-photos for carousel/spain5.jpeg" onclick="stopSlide()" alt="spain-photo5">
+        <img class="spain" src="spain-photos for carousel/spain6.jpeg" onclick="stopSlide()" alt="spain-photo6">
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img class="slide-thumbnail" src="..." onclick="currentSlide(1)" alt="Caption One">
+        </div>
+        <div class="column">
+            <img class="slide-thumbnail" src="..." onclick="currentSlide(2)" alt="Caption Two">
+        </div>
+        <div class="column">
+            <img class="slide-thumbnail" src="..." onclick="currentSlide(3)" alt="Caption Three">
+        </div>
+        <div class="column">
+            <img class="slide-thumbnail" src="..." onclick="currentSlide(4)" alt="Caption Four">
+        </div>
+        <div class="column">
+            <img class="slide-thumbnail" src="..." onclick="currentSlide(5)" alt="Caption Five">
+        </div>
+        <div class="column">
+            <img class="slide-thumbnail" src="..." onclick="currentSlide(6)" alt="Caption Six">
+        </div>
+    </div>
+
+    <button class="previous" onclick="nextSlide(-1)"> < </button>
+            <button class="next" onclick="nextSlide(1)"> > </button>
+            <div class="control">
+                <button onclick="stopSlide()">Stop</button>
+                <button onclick="playSlide()">Play</button>
+            </div>
+
+            <!--<script>
+                let indicator = 0;
+                let slides = document.getElementsByClassName("spain");
+                let slideInterval;
+                let slideTime = prompt("Please enter the time (in seconds) you want each slide to stay on the screen");
+                slideTime = slideTime * 1000;
+                const dots = document.getElementsByClassName("column");
+
+                
+                showSlides();
+                function showSlides() {
+                    for (let i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                        dots[i].style.display = "block";
+                    }
+                    indicator++;
+                    if (indicator > slides.length) {
+                        indicator = 1;
+                    }
+                    slides[indicator - 1].style.display = "block";
+                    dots[indicator - 1].style.backroundColor = "red"
+                    slideInterval = setTimeout(showSlides, slideTime);
+                }
+
+                function prevSlide() {
+                    for (let i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                        dots[i].style.display = "block";
+                    }
+                    indicator--;
+                    if (indicator < 1) {
+                        indicator = slides.length;
+                    }
+                    slides[indicator - 1].style.display = "block";
+                    dots[indicator - 1].style.backroundColor = "red"
+                }
+
+                function nextSlide() {
+                    for (let i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                        //slides[i].style.display = "block";
+                    }
+                    indicator++
+                    if (indicator > slides.length) {
+                        indicator = 1;
+                    }
+                    slides[indicator - 1].style.display = "block";
+                    dots[indicator - 1].style.backroundColor = "red"
+                }
+
+                function playSlide() {
+                    slideInterval = setTimeout(showSlides, slideTime);
+                }
+
+                function stopSlide() {
+                    clearTimeout(slideInterval);
+                }
+
+                function currentSlide(n) {
+                    slides[n].style.display = "block";
+                }
+
+
+
+            </script>-->
+</body>
+
+</html>
